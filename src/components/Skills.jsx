@@ -1,6 +1,6 @@
-import Skill from "../widgets/Skill";
 import React from "react";
 import icons from "../assets/constants/icons";
+import SkillCard from "./SkillCard";
 
 export default function Skills() {
     const skills = [
@@ -10,18 +10,29 @@ export default function Skills() {
         { id: 4, name: "React", icon: icons.react },
         { id: 5, name: "Version Control", icon: icons.git },
         { id: 6, name: "Node Js", icon: icons.node },
-        { id: 6, name: "React Native", icon: icons.react },
-        { id: 6, name: "Django", icon: icons.django },
+        { id: 7, name: "React Native", icon: icons.react },
+        { id: 8, name: "Django", icon: icons.django },
     ];
     return (
-        <div class="skills">
-            {
-                skills.map(skill =>
-                    <Skill
+        <div className="skills-container">
+            <div className="skill--card-row skill--card-row-1">
+                {skills.concat(skills).map((skill, index) => (
+                    <SkillCard
                         skill={skill}
                     />
-                )
-            }
+                ))}
+            </div>
+            <div className="skill--card-row skill--card-row-2">
+                {skills.concat(skills).map((skill, index) => (
+                    <SkillCard
+                        skill={skill}
+                    />
+                ))}
+            </div>
         </div>
     )
 }
+
+
+
+

@@ -4,7 +4,7 @@ import { scrollToSection } from '../functions';
 
 export default function NavLinks(props) {
 
-    const navLinks = [{ name: "Works", link: "works" }, { name: "Blog", link: "blog" }, { name: "About", link: "about" }]
+    const navLinks = [{ name: "Works", link: "works" }, { name: "About", link: "about" }, { name: "Blog", link: "blog" }]
 
     const scroll = (id) => {
         if (props.toggleMenu) {

@@ -392,23 +392,63 @@ html,
   font-family: "Rajdhani", sans-serif;
 }
 
-.skills {
-  margin-top: 1.5rem;
+.skill--card{
+  background-color: #D4D4D4;
+  border-radius: 12px;
   display: flex;
-  flex-direction: row;  
-  flex-wrap: wrap;   
-  gap: 3rem;
-}
-
-.skill-widget {
-  width: 5rem;
-  display: flex;
-  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0.6rem;
+  white-space: nowrap;  
 }
 
 .skill-name {
-  font-size: 1rem;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
   color: black;
+}
+
+.skill-description{
+  margin: 0;
+  font-size: 16px;
+}
+
+@keyframes moveRightToLeft {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes moveLeftToRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.skill--card-row-1,
+.skill--card-row-2 {
+  display: flex;
+  width: 200%;
+  gap: 1.5rem;
+}
+
+.skill--card-row-1 {
+  animation: moveRightToLeft 20s linear infinite;
+}
+
+.skill--card-row-2 {
+  animation: moveLeftToRight 20s linear infinite;
+}
+
+.skills-container {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 1.5rem;
+}
+
+.skill--card-row {
+  display: flex;
+  width: 200%;  /* Ensuring the width is enough to contain duplicates for seamless animation */
 }
 
 .experience {
