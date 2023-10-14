@@ -1,7 +1,7 @@
 import { useMediaQuery } from '@mui/material'
 import React from 'react'
-import TextButton from '../widgets/TextButton';
-import avatar from "../assets/avatar.png"
+import TextButton from '../../../widgets/TextButton';
+import avatar from "../../../assets/avatar.png"
 
 export default function HeroSection() {
     const isMobileScreen = useMediaQuery("(max-width: 1020px)");

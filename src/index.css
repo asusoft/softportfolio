@@ -459,6 +459,80 @@ html,
   justify-content: center;
 }
 
+.article--cards-container {
+  width: 100%;
+  height: min-content;
+  margin-top: 4rem;
+  gap: 1rem;
+  display: flex; 
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.article-card {
+  width: calc(100% / 3 );
+  aspect-ratio: 2 / 2;
+  background-color: #EDEDED;
+  padding: 1rem;
+  position: relative;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #9B3B12;
+  padding-bottom: 2rem;
+}
+
+.article--card_header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.article--card_header > p {
+  margin: 0;
+  align-self: center;
+}
+
+.article--card_info {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.article--card_info_title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.article--card-image_container {
+  margin-top: 1rem;
+  width: 100%; 
+  height: 65%;
+}
+
+.article--card_image{
+  width: 100%; 
+  height: 100%;
+  border-radius: 16px;
+}
+
+.article--topic{
+  background-color: #D4D4D4;
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+.article--topic > p {
+  margin: 0;
+  font-weight: 600;
+  font-family: "Rajdhani", sans-serif;
+}
+
+
 
 @media only screen and (max-width: 768px) {
   .app {
@@ -483,6 +557,10 @@ html,
   .hero{
     padding: 0;
   }
+
+  .article-card {
+    width: 100%;
+  }
 }
 @media only screen and (min-width: 769px) {
   .app {
@@ -500,9 +578,15 @@ html,
   .hero--description_text {
     font-size: 2rem;
   }
+  .article--cards-container {
+    flex-wrap: nowrap;
+   }
+  .article-card {
+    width: calc(100% / 2);
+  }
 }
 
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 1022px) {
   .app {
     padding: 0 7.8rem;
   }
@@ -510,9 +594,6 @@ html,
     left: 7.8rem;
     right: 7.8rem;
   }
-}
-
-@media only screen and (min-width: 1022px) {
   .hero--left{
     width: 60%;
     text-align: left;
@@ -566,5 +647,9 @@ html,
   .experience--title {
     margin: 0;
     font-size: 18px;
+  }
+
+  .article--cards-container {
+   flex-wrap: nowrap;
   }
 }

@@ -1,8 +1,9 @@
 import { useMediaQuery } from '@mui/material';
 import React from 'react'
-import HeroSection from '../../components/HeroSection';
-import AboutSection from '../../components/AboutSection';
-import WorksSection from './../../components/WorksSection';
+import HeroSection from './sections/HeroSection';
+import AboutSection from './sections/AboutSection';
+import WorksSection from './sections/WorksSection';
+import ArticlesSection from './sections/ArticlesSection';
 
 
 export default function HomePage() {
@@ -13,6 +14,7 @@ export default function HomePage() {
             <HeroSection />
             <WorksSection />
             <AboutSection />
+            <ArticlesSection />
         </div>
     )
 }

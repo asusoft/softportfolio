@@ -1,10 +1,11 @@
 import React from 'react'
-import Skills from './Skills'
-import Experience from './Experience';
-import { useMediaQuery } from '@mui/material';
-import CardButton from '../widgets/CardButton';
 
-import avatar from "../assets/images/avatar.png"
+import Skills from '../../../components/Skills'
+import Experience from '../../../components/Experience';
+import { useMediaQuery } from '@mui/material';
+import CardButton from '../../../widgets/CardButton';
+
+import avatar from "../../../assets/images/avatar.png"
 
 export default function AboutSection() {
     const isMobileScreen = useMediaQuery("(max-width: 1022px)");

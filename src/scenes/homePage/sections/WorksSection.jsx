@@ -1,7 +1,7 @@
 import React from "react";
 
-import WorkCard from '../components/WorkCard';
-import CardButton from '../widgets/CardButton';
+import WorkCard from '../../../components/WorkCard';
+import CardButton from '../../../widgets/CardButton';
 
 export default function WorksSection({ }) {
     return (

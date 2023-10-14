@@ -50,7 +50,13 @@ export default function Navbar() {
                             <CircleButton
                                 size="large"
                                 color="#171717"
-                                onClick={() => scrollToSection("hero")}
+                                onClick={() => {
+                                    if (isMenuOpen) {
+                                        toggleMenu()
+                                    }
+                                    scrollToSection("hero")
+                                }
+                                }
                                 child={
                                     <Home sx={{ color: "#F5F5F5", fontSize: 30 }} />
                                 }
